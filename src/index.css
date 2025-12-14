@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "IBM Plex Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-style: normal;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --tw-border-opacity: 1;
+}
+
+@theme {
+  --color-border-clr: 191 193 183;
+}
+
+.light [data-scheme="primary"] {
+  --bg: 253 253 248;
+  --accent: 229 231 224;
+  --color-border-clr: 191 193 183;
+  --input-bg: 238 239 233;
+  --input-bg-hover: 238 239 233;
+  --input-border: 210 211 204;
+  --input-border-hover: 210 211 204;
+  --text-primary: 77 79 70;
+  --text-secondary: 101 103 94;
+  --text-muted: 158 160 150;
+  --tw-shadow-color: 77 79 70;
+  --primary: var(--text-primary);
+  --secondary: var(--text-secondary);
+  --muted: var(--text-muted);
+  --bg-primary: var(--primary);
+  --bg-accent: var(--accent);
+}
+
+/* background-image: linear-gradient(
+      rgba(225 215 194 / 1),
+      rgba(225 215 194 / 1)
+    ),
+    /* Brown overlay */
+
+body {
+  background-image: linear-gradient(
+      rgba(139, 90, 43, 0.3),
+      rgba(139, 90, 43, 0.3)
+    ),
+    /* Brown overlay */ url("/images/granite.png"),
+    url("/images/keyboard_garden.png");
+
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-blend-mode: normal, multiply, normal;
+  background-size: 100%, 100px, 53%;
+  background-position: center, center, 100% bottom;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  overflow-x: hidden;
+  height: 100dvh;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevents scrolling */
+  position: fixed;
+}
+
+a {
+  /* font-weight: inherit; */
+  color: inherit;
+  text-decoration: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+.border-button {
+  border-color: rgb(177 120 22 / var(--tw-border-opacity, 1));
+}
+
+.bg-orange {
+  background-color: rgb(235 157 42 / var(--tw-bg-opacity, 1));
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modal-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
+
+.animate-modal-open {
+  animation: modal-in 0.2s ease-out forwards;
+}
+
+.animate-modal-close {
+  animation: modal-out 0.2s ease-in forwards;
+}
