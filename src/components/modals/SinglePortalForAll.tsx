@@ -28,6 +28,11 @@ export default function SinglePortalForAll() {
       setNotMaximized(false);
     }
   };
+  const handleMinimize = () => {
+    if (!notMaximized) {
+      setNotMaximized(true);
+    }
+  };
 
   if (!active) return null;
 
@@ -41,7 +46,10 @@ export default function SinglePortalForAll() {
         onAnimationEnd={handleAnimationEnd}
       >
         <div className="bg-transparent  rounded-[2px] h-[30em]">
-          <PortalHeader onMaximize={handleMaximize} />
+          <PortalHeader
+            onMaximize={handleMaximize}
+            onMinimize={handleMinimize}
+          />
           <div
             className={`bg-[#EEEFE9]  flex items-center justify-center ${
               notMaximized ? "h-[90%]" : "h-screen"

@@ -5,7 +5,9 @@ import { toggleModal } from "../../store/features/toggleModal";
 
 export default function PortalHeader({
   onMaximize,
+  onMinimize,
 }: {
+  onMinimize: () => void;
   onMaximize: () => void;
 }) {
   const dispatch = useAppDispatch();
@@ -18,7 +20,12 @@ export default function PortalHeader({
         <p className="font-semibold text-sm">Documentation -PostHog</p>
       </div>
       <div className="flex items-end gap-2">
-        <p className="text-medium  font-medium">_</p>
+        <p
+          className="text-medium  font-medium cursor-pointer"
+          onClick={onMinimize}
+        >
+          _
+        </p>
         <p onClick={onMaximize}>
           <MdCheckBoxOutlineBlank className="text-medium font-medium" />
         </p>
