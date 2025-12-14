@@ -10,7 +10,7 @@ export default function PortalHeader({
 }) {
   const dispatch = useAppDispatch();
   return (
-    <div className="sticky top-0 z-50 flex justify-between items-center w-full border-b border-b-[rgb(var(--color-border-clr))] backdrop-blur-3xl bg-primary/50 pl-[0.2rem] pr-[0.5rem] py-[0.5rem]">
+    <div className="sticky top-0 z-50 flex justify-between items-center w-full border-b border-b-[rgb(var(border-clr))] backdrop-blur-3xl bg-primary/50 pl-[0.2rem] pr-[0.5rem] py-[0.5rem]">
       <div>
         <IoDocumentTextOutline className="font-semibold text-lg" />
       </div>

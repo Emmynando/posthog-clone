@@ -39,17 +39,10 @@
   --bg-primary: var(--primary);
   --bg-accent: var(--accent);
 }
-
-/* background-image: linear-gradient(
-      rgba(225 215 194 / 1),
-      rgba(225 215 194 / 1)
-    ),
-    /* Brown overlay */
-
 body {
   background-image: linear-gradient(
-      rgba(139, 90, 43, 0.3),
-      rgba(139, 90, 43, 0.3)
+      rgba(139, 90, 43, 0.18),
+      rgba(139, 90, 43, 0.18)
     ),
     /* Brown overlay */ url("/images/granite.png"),
     url("/images/keyboard_garden.png");
@@ -65,7 +58,8 @@ body {
   max-width: 100%;
   width: 100%;
   margin: 0;
-  overflow: hidden; /* Prevents scrolling */
+  /* opacity: 0; */
+  overflow: hidden;
   position: fixed;
 }
 

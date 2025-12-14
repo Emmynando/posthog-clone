@@ -20,7 +20,7 @@ export default function Navbar() {
   const { windowWidth } = useWindowSize();
   const md = (windowWidth as number) >= 768;
   return (
-    <nav className="sticky top-0 z-50 flex justify-between items-center w-full border-b-[rgb(var(--border))] backdrop-blur-3xl bg-[#e5e7e0bf] pl-[0.5rem] pr-2 ">
+    <nav className="top-0 z-50 flex justify-between items-center w-full border-b-[rgb(var(--border))] backdrop-blur-3xl bg-[#e5e7e0bf] pl-[0.5rem] pr-2 ">
       <ul className="flex gap-2 text-[#23251d]! text-[13px] font-medium">
         {md &&
           NAVLINKS.map((link) => (
@@ -33,15 +33,15 @@ export default function Navbar() {
       </ul>
 
       <button
-        className="md:hidden -ml-8"
+        className="relative md:hidden -ml-8"
         onClick={() => setShowNav((prev) => !prev)}
       >
         <IoIosArrowDown />
       </button>
 
-      <ul className="flex justify-center items-center gap-1">
+      <ul className="flex justify-between md:justify-center items-center gap-1">
         <li>
-          <button className="relative  items-center bg-orange border-[1.5px] border-[#eb9d28] rounded-md  group-disabled:hover:!translate-y-[-3px] group-disabled:hover:!translate-y-[-2px]">
+          <button className="relative items-center bg-orange border-[1.5px] border-[#eb9d28] rounded-md  group-disabled:hover:!translate-y-[-3px] group-disabled:hover:!translate-y-[-2px]">
             <span className="flex items-center justify-center bg-orange px-2.5 py-1 w-full h-full border-[1.5px] translate-y-[-2px] hover:translate-y-[-3px] active:transition-all active:duration-100 rounded-md active:translate-y-[-1.5px] border-button">
               <p className="text-black text-[13px] font-bold">
                 Get Started - free

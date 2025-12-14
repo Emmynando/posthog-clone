@@ -78,8 +78,8 @@ const HOMEITEMS2 = [
 export default function HomeComp() {
   const dispatch = useAppDispatch();
   return (
-    <div className="flex justify-between w-[80%] md:w-full">
-      <div className="flex flex-col flex-wrap gap-4 h-[85dvh] w-[10%] mt-6 pl-4">
+    <div className="flex md:justify-between">
+      <div className="flex flex-col flex-wrap gap-4 h-[85dvh] min-w-[10%] mt-6 pl-4">
         {HOMEITEMS.map((item) => (
           <div key={item.id} className="flex flex-col items-center">
             <img
@@ -102,7 +102,7 @@ export default function HomeComp() {
           </div>
         ))}
       </div>
-      <div className="flex flex-col flex-wrap gap-4 h-[85dvh] w-[10%] mt-6 pr-4">
+      <div className="flex flex-col md:flex-wrap gap-4 h-[85dvh] min-w-[10%] mt-6 pr-4">
         {HOMEITEMS2.map((item) => (
           <div key={item.id} className="flex flex-col items-center">
             <img
