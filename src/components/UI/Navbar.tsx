@@ -20,7 +20,7 @@ export default function Navbar() {
   const { windowWidth } = useWindowSize();
   const md = (windowWidth as number) >= 768;
   return (
-    <nav className="top-0 z-50 flex justify-between items-center w-full border-b-[rgb(var(--border))] backdrop-blur-3xl bg-[#e5e7e0bf] pl-[0.5rem] pr-2 ">
+    <nav className="top-0 z-50 flex justify-between items-center w-full border-b-[rgb(var(--border))] backdrop-blur-3xl bg-[#e5e7e0bf] pl-[0.5rem] pr-2 py-1">
       <ul className="flex gap-2 text-[#23251d]! text-[13px] font-medium">
         {md &&
           NAVLINKS.map((link) => (
