@@ -51,12 +51,12 @@ export default function SinglePortalForAll() {
             onMinimize={handleMinimize}
           />
           <div
-            className={`bg-[#EEEFE9]  flex items-center justify-center ${
+            className={`bg-[#EEEFE9] flex items-center justify-center ${
               notMaximized ? "h-[90%]" : "h-screen"
             }`}
           >
             {/* text box */}
-            <div className="w-[40%]">
+            <div className="w-[40%] text-black">
               <p className="text-center">
                 {" "}
                 This is a clone of{" "}
